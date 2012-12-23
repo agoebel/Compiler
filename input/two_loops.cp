@@ -1,0 +1,23 @@
+#PRINTS OUT 1, 2, 3, 4, 1, 1, 2, 3, 4, 2, 1, 2, 3, 4, 3#
+PROGRAM
+INT X, A;
+BEGIN
+	X = 0;
+	LOOP [X < 3]
+	BEGIN
+		A = 0;
+		LOOP [A <= 3]
+		BEGIN
+			int x;
+			#THIS SHOULD HAVE NO EFFECT ON THE OUTER X#
+			x = 0;
+
+			#A SHOULD BE ACCESSIBLE FROM THE OUTER LOOP#
+			A = A + 1;
+			PRINTF A;
+		END
+
+		X = X + 1;
+		PRINTF X;
+	END
+END.
